@@ -1,0 +1,49 @@
+/*
+changed the backgound colors balck/gray hues
+    removed background image
+    made some header/title colors green/gray
+    made all text white
+*/
+
+/* Dark Theme */
+
+body {
+    background-color: black;
+}
+#themeButton {
+    background-color: white;
+    color: black;
+}
+header {
+    background-color: #282828;
+    color: #5b885a;
+}
+.navBar button {
+    border: 2px solid gray;
+    background-color: #8b8b8b;
+}
+main {
+    background-image: none;
+    background-color: #282828;
+}
+main h2 {
+    background-color: #a2bca0;
+    border: 2px solid gray;
+}
+.boulder {
+    border: solid 3px gray;
+}
+.boulder img {
+    border: 5px solid #a2bca0;
+}
+.routes button {
+    background-color: #5b885a;
+    color: white;
+}
+.boulderDesc {
+    background-color: #a2bca0;
+    border: solid 3px gray;
+}
+.videoContainer {
+    border: 3px solid gray;
+}

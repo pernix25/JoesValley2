@@ -1,0 +1,184 @@
+/*
+Since there were no refactoring comments on project 3 I didn't 
+change much; I just added a couple extra things to my website and 
+of course styled them
+*/
+
+/* Desktop CSS */
+
+#themeButton {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 500;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+body {
+    display: grid;
+    grid-template-columns: 1.5fr 4fr 1fr;
+    grid-template-rows: 150px auto;
+    grid-template-areas: 
+        "head head head"
+        "seeThrough1 main seeThrough2";
+    background-color: #AFE1AF;
+}
+button:hover {
+    cursor: pointer;
+}
+
+
+
+/* Header CSS */
+header {
+    display: flex;
+    position: relative;
+    background-color: #FBEEAC;
+    text-align: center;
+    justify-content: center;
+    grid-area: head;
+    border-radius: 5px;
+}
+.navBar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.navBar button {
+    font-size: 15px;
+    border: 2px solid;
+    border-radius: 25px;
+    padding: 5px;
+    margin-left: 5px;
+    background-color: sandybrown;
+}
+header > img {
+    position: absolute;
+    top: 5px;
+    left: -20px;
+    z-index: 0;
+}
+.pageHeader {
+    z-index: 1;
+}
+
+/* Main conent CSS */
+main {
+    grid-area: main;
+    display: grid;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-image: url("/imgs/cloud.jpg");
+    background-size: cover;
+    background-position: center;
+}
+main h2 {
+    background-color: #FBEEAC;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 7px;
+    border: 2px solid black;
+}
+.boulder{
+    margin: 10px;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto auto;
+    padding: 2px 5px 2px 2px;
+    border-radius: 10px;
+    border: solid 3px;
+    padding: 10px;
+}
+.boulder h3 {
+    grid-column: span 3;
+    color: white;
+    text-align: center;
+}
+.boulder img {
+    grid-column: 1;
+    grid-row: 2;
+    border-radius: 15px;
+    border: 5px solid skyblue;
+    justify-content: center;
+}
+img + img {
+    display: none;
+}
+.routes {
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+}
+.routes button {
+    width: 100px;
+    background-color: skyblue;
+    color: white;
+    margin: 2px 10px 2px 10px;
+    border-radius: 7px;
+}
+.routes > h4 {
+    text-align: center;
+}
+.boulderDesc {
+    background-color: skyblue;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    border: solid 3px black;
+    align-items: center;
+}
+
+/* Video CSS */
+#marksClimbs {
+    display: none;
+}
+
+video {
+    width: 300px;
+    height: 500px;
+}
+.videoContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 10px;
+}
+
+/* Tablet CSS */
+
+@media screen and (max-width: 768px) {
+    header > img {
+        display: none;
+    }
+    .boulder img {
+        border: 5px solid black;
+    }
+    .videoContainer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        border: none;
+    }
+    .routes button {
+        background-color: skyblue;
+        color: black;
+        margin: 2px 10px 2px 10px;
+        border-radius: 7px;
+    }
+    .boulderDesc {
+        display: none;
+    }
+}
