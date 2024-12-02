@@ -1,3 +1,8 @@
+/*
+    This code is Mark Carroll's
+    refactored the theme js to its own file (page.js)
+*/
+
 function changeImage(imageId, boulderId) {
     let images = document.querySelectorAll(`${boulderId} img`);
     images.forEach(img => {
@@ -53,7 +58,11 @@ document.getElementById('allAreasButton').addEventListener('click', function() {
     let selectedLocation = document.getElementById('marksClimbs');
     if (selectedLocation) {
         selectedLocation.style.display = 'none';
-    }    
+    }
+    selectedLocation = document.getElementById('visitor');
+    if (selectedLocation) {
+        selectedLocation.style.display = 'none';
+    }  
 });
 
 document.getElementById('climbingVideosButton').addEventListener('click', function() {
@@ -245,19 +254,3 @@ document.getElementById('bubbatronicButton').addEventListener('click', function(
     changeImage('bubbatronicImage', '#chipsBoulder');
     changeName('chipsHeader', 'Chips', 'Bubbatronic', 'V9');
 });
-
-/* theme button */
-document.getElementById('themeButton').addEventListener('click', () => {
-    let theme = document.getElementById('darkTheme')
-    if (theme) {
-        theme.remove();
-    } else {
-        let stylesheet = document.createElement('link');
-
-        stylesheet.rel = 'stylesheet';
-        stylesheet.href = 'css/darkTheme.css';
-        stylesheet.id = 'darkTheme';
-
-        document.head.appendChild(stylesheet);}
-
-})

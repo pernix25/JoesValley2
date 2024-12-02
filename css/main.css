@@ -1,7 +1,7 @@
 /*
-Since there were no refactoring comments on project 3 I didn't 
-change much; I just added a couple extra things to my website and 
-of course styled them
+Since there were no refactoring comments on project 4 I didn't 
+change much; I just added a button and added the validation 
+style stuff in here
 */
 
 /* Desktop CSS */
@@ -13,6 +13,14 @@ of course styled them
     z-index: 500;
     background-color: black;
     color: white;
+    border-radius: 5px;
+}
+#visitBtn {
+    position: fixed;
+    width: 100px;
+    top: 40px;
+    right: 10px;
+    z-index: 500;
     border-radius: 5px;
 }
 body {
@@ -133,6 +141,46 @@ img + img {
     text-align: center;
     border: solid 3px black;
     align-items: center;
+}
+.errorMsg {
+    display: None;
+}
+#vistor {
+    display: flex;
+    flex-direction: column;
+}
+#successMsg {
+    display: None;
+}
+
+/* Validation CSS */
+#visitor {
+    border: solid black 3px;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    width: 250px;
+}
+#visitor h1 {
+    text-align: center;
+}
+#submitBtn {
+    justify-content: center;
+    align-items: center;
+}
+
+input.was-validated:invalid {
+    color: red;
+    border: 1px solid red;
+}
+input.was-validated:invalid ~ div {
+    display: block;
+}
+input:valid ~ div {
+    display: none;
+}
+input:invalid ~ div {
+    display: none;
 }
 
 /* Video CSS */

@@ -9,6 +9,7 @@
 
     <body>
         <button id="themeButton">Toggle Theme</button>
+        <button id="visitBtn">Visitor</button>
 
         <header>
             <img src="imgs/mtn_logo.png" alt="Mountain Logo">
@@ -220,9 +221,73 @@
                     <video controls src="/videos/greenClimb.mp4" type="video/mp4"></video>
                 </div>
             </section>
+
+            <section id="visitor">
+                <h1>Visitor Form</h1>
+                <p id="successMsg">Thank you for visiting!</p>
+                <form id="myForm" method="POST" novalidate>
+                    <label for="firstName">First Name: </label>
+                    <input type="text" id="firstName" placeholder="Enter first name">
+                    <div class="errorMsg"></div>
+                    <br>
+
+                    <label for="lastName">Last Name: </label>
+                    <input type="text" id="lastName" placeholder="Enter last name">
+                    <div class="errorMsg"></div>
+                    <br>
+
+                    <label for="address">Address: </label>
+                    <input type="text" id="address" placeholder="Enter address">
+                    <div class="errorMsg"></div>
+                    <br>
+
+                    <label for="city">City: </label>
+                    <input type="text" id="city" placeholder="Enter city">
+                    <div class="errorMsg"></div>
+                    <br>
+
+                    <label for="state">State: </label>
+                    <input type="text" id="state" placeholder="Enter 2 letter state">
+                    <div class="errorMsg"></div>
+                    <br>
+
+                    <label for="zipCode">Zip Code: </label>
+                    <input type="text" id="zipCode" placeholder="Enter 5 digits for zip code">
+                    <div class="errorMsg"></div>
+                    <br>
+
+                    <label for="phone">Cell Phone: </label>
+                    <input type="text" id="phone" placeholder="Enter cell phone number">
+                    <div class="errorMsg"></div>
+                    <br>
+
+                    <label for="email">Email: </label>
+                    <input type="text" id="email" placeholder="Enter email">
+                    <div class="errorMsg"></div>
+                    <br>
+
+                    <p>How did you hear about us?</p>
+                    <label for="facebook">Facebook:</label>
+                    <input type="checkbox" name="options" id="facebook">
+                    <br>
+
+                    <label for="friend">Friend:</label>
+                    <input type="checkbox" name="opitons" id="friend">
+                    <br>
+
+                    <label for="schoolClass">Class:</label>
+                    <input type="checkbox" name="options" id="schoolClass">
+                    <div class="errorMsg"></div>
+                    <br>
+
+                    <button id="submitBtn" type="submit">Submit</button>
+                </form>
+            </section>
         </main>
 
-        <script src="/scripts/picture_script.js"></script>
+        <script src="/scripts/validation.js"></script>
+        <script src="/scripts/main.js"></script>
+        <script src="/scripts/page.js"></script>
     </body>
 
 </html>
